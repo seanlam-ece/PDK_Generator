@@ -21,8 +21,8 @@ deploy:
   distributions: sdist bdist_wheel
   user: seanlm
   password:
-    secure: PLEASE_REPLACE_ME
-  on:
+    secure: Vjyb0d8Zq/ovoq3d2t/dKU0MIiKT/Y3037cJCs+8qsiErsfP81zzOyrFV2B7IWg/aDz4sA9EYAdxyoeuJIik54yI5Ad4CvGkUQq4djbBrxr2CxNIWNwMG3nIAmDJNMvb0d8GXw6fM8ckoEKWIL7x4DyeFTBY2cQn/92iaU4EHDBvZ/1I5D/qS84e7y8zUUQEU9k3Y0LhvBnRKalZI4g8hxkzaV57Ht91mFH50HEIex8iDUkOJ3ZyGSEYaPzlQ27IhENeI3amLi8mwQtsyD73SHAOJY4IF7uk1Tzwa8f5QbWlbyBwLdn/WU4saE3EXdPxovBjlLW8+OvLjq1SjtnU8Dqxx1xbmx31QvYyVERAySfrffZa652rScengmi1F7C1DYRxkI7IDcyY6q5dY5p4KSyZEujem6InBF5+tlWPUMFUayiWvCPW1Rv0uqpD77ugTnosu9c9eAyDP5OD+dFgVY8nOcoILJn9XZLEkP6KxQhu8NxOhYuWOwAnP9rpVV58e1Ms81t71IGlR0S1l2PRp6Of62v6TQSKgn6/oYrzQQSh9w0pieR4NMsVvlKF/y5nok8fkvIx3Eo9BZIwBDkNHubGl4JAD/jS54vlbl9TAUUYsT5n5RYdgexwI90nTAlSzBoV6TZIpmQV2XY8Glyv0OtLRiQqQM+hwnVjtswzEIM=
+  true:
     tags: true
     repo: seanlam97/PDK_Generator
     python: 3.8
