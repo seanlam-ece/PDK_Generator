@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>DRC</description>
+ <original-file/>
+ <generator>drc: script='C:\\Users\\ELEC 402\\KLayout\\tech\\SiEPICfab-Grouse-Base\\drc\\SiEPICfab-Grouse-Base_DRC.lydrc'</generator>
+ <top-cell>TOP</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>Devices</name>
+   <description>Devices cannot be overlapping</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Si devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Si_Partial devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Si_Npp devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Si_Ppp devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Si_Np devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Si_Pp devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Si_N devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>VC devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>M1 devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Ox_Open devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Boundary</name>
+   <description>Defect_Open devices are out of boundary</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si width</name>
+   <description>Si minimum feature size violation; min 0.06 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Partial width</name>
+   <description>Si_Partial minimum feature size violation; min 0.1 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Npp width</name>
+   <description>Si_Npp minimum feature size violation; min 2.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Ppp width</name>
+   <description>Si_Ppp minimum feature size violation; min 2.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Np width</name>
+   <description>Si_Np minimum feature size violation; min 1.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Pp width</name>
+   <description>Si_Pp minimum feature size violation; min 1.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_N width</name>
+   <description>Si_N minimum feature size violation; min 2.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VC width</name>
+   <description>VC minimum feature size violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1 width</name>
+   <description>M1 minimum feature size violation; min 3.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Ox_Open width</name>
+   <description>Ox_Open minimum feature size violation; min 10.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Dicing width</name>
+   <description>Dicing minimum feature size violation; min 200.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Defect_Open width</name>
+   <description>Defect_Open minimum feature size violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si space</name>
+   <description>Si minimum space violation; min 0.06 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Partial space</name>
+   <description>Si_Partial minimum space violation; min 0.1 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Npp space</name>
+   <description>Si_Npp minimum space violation; min 2.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Ppp space</name>
+   <description>Si_Ppp minimum space violation; min 2.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Np space</name>
+   <description>Si_Np minimum space violation; min 1.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Pp space</name>
+   <description>Si_Pp minimum space violation; min 1.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_N space</name>
+   <description>Si_N minimum space violation; min 2.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VC space</name>
+   <description>VC minimum space violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1 space</name>
+   <description>M1 minimum space violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Ox_Open space</name>
+   <description>Ox_Open minimum space violation; min 10.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Defect_Open space</name>
+   <description>Defect_Open minimum space violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si-VC separation</name>
+   <description>Si-VC minimum separation violation; min 3.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si-Si_Npp separation</name>
+   <description>Si-Si_Npp minimum separation violation; min 2.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si-Si_Ppp separation</name>
+   <description>Si-Si_Ppp minimum separation violation; min 2.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si-Dicing separation</name>
+   <description>Si-Dicing minimum separation violation; min 100.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Partial-Dicing separation</name>
+   <description>Si_Partial-Dicing minimum separation violation; min 100.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Ox_Open-M1 separation</name>
+   <description>Ox_Open-M1 minimum separation violation; min 10.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Defect_Open-M1 separation</name>
+   <description>Defect_Open-M1 minimum separation violation; min 10.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Partial-Si overlap</name>
+   <description>Si_Partial-Si minimum overlap violation; min 0.1 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Npp-VC overlap</name>
+   <description>Si_Npp-VC minimum overlap violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Ppp-VC overlap</name>
+   <description>Si_Ppp-VC minimum overlap violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Np-Si_Npp overlap</name>
+   <description>Si_Np-Si_Npp minimum overlap violation; min 3.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Np-Si_Ppp overlap</name>
+   <description>Si_Np-Si_Ppp minimum overlap violation; min 3.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Pp-Si_Npp overlap</name>
+   <description>Si_Pp-Si_Npp minimum overlap violation; min 3.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_Pp-Si_Ppp overlap</name>
+   <description>Si_Pp-Si_Ppp minimum overlap violation; min 3.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_N-Si_Npp overlap</name>
+   <description>Si_N-Si_Npp minimum overlap violation; min 3.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Si_N-Si_Ppp overlap</name>
+   <description>Si_N-Si_Ppp minimum overlap violation; min 3.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VC-M1 overlap</name>
+   <description>VC-M1 minimum overlap violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VC-Si_Npp overlap</name>
+   <description>VC-Si_Npp minimum overlap violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>VC-Si_Ppp overlap</name>
+   <description>VC-Si_Ppp minimum overlap violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>M1-VC overlap</name>
+   <description>M1-VC minimum overlap violation; min 5.0 um</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>TOP</name>
+   <variant/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+ </items>
+</report-database>

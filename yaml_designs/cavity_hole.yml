@@ -1,0 +1,8 @@
+# Cavity Hole
+design-params:
+  x-coord: 0.0
+  y-coord: 0.0
+  hole-radius: 10.0
+  gap: 2.0
+compact-model:
+  name: "cavity"

@@ -1,0 +1,12 @@
+design-params:
+  fishbone: false
+  nanotaper-width-taper-end: 0.06
+  strip-taper-length-fraction: 1
+  strip-waveguide-width-taper-end: 0.5
+  swg duty-cycle-swg-end: 0.7
+  swg-duty-cycle-strip-end: 0.5
+  swg-period-strip-end: 0.2
+  swg-period-swg-end: 0.2
+  swg-waveguide-width-end: 0.5
+  waveguide-length: 10.0
+  wavelength: 1310

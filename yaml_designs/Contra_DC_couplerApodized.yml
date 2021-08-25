@@ -1,0 +1,15 @@
+# Contra Directional Coupler
+design-params:
+  n-periods: 300
+  grating-period: 0.317 # microns
+  gap: 0.15 # microns
+  corrugation-width1: 0.03 # microns
+  corrugation-width2: 0.04 # microns
+  anti-reflection: true
+  grating-type: false # Rectangular = False, Sinusoidal = True
+  waveguide1-width: 0.45 # microns
+  waveguide2-width: 0.55 # microns
+  gaussian-index: 2.5
+  apodization-constant: 2
+compact-model:
+  name: "cdc_coupler"

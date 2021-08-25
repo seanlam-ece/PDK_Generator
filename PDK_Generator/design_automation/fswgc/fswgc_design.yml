@@ -1,0 +1,12 @@
+design-params:
+  cladding-index: 1.0
+  duty-cycle: 0.488193
+  fill-factor: 0.244319
+  grating-effective-index: 2.75618
+  grating-length: 15.0
+  grating-period: 1.18939
+  insertion-angle: -31.0
+  taper-angle: 35.0
+  taper-length: 19.0
+  waveguide-width: 0.5
+  wavelength: 1.55

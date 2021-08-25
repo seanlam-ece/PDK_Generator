@@ -1,0 +1,14 @@
+# Comments
+name: 'Name of Component'
+techname: &tname '' # KEEP BLANK
+libname: ''         # KEEP BLANK
+compact-model:
+  name: &cm_name 'compact_model_name'
+  photonic-model: &cm_pmodel 'photonic_model'
+design-intent:
+  polarization: 'TE' 
+  mode-num: 0
+design-params:
+simulation-params:
+  wavelength: 1.55
+  

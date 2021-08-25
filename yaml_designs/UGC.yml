@@ -1,0 +1,15 @@
+# Universal Grating Coupler
+design-params:
+  design-wavelength: 1.55 #(micron)
+  wg-thickness: 0.22
+  etch-depth: 0.13
+  polarization: "TE"
+  cladding-index: 1.444
+  taper-angle: 35 #deg
+  grating-length: 15
+  taper-length: 19
+  duty-cycle: 0.5
+  waveguide-width: 0.5
+  insertion-angle: -31.0 #deg
+compact-model:
+  name: "gc_universal"

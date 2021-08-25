@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>#################################################################################
+#                Dream Photonics, copyright 2020                                #
+#################################################################################
+
+'''
+Initialization
+- menu item
+- locate TechGen python package
+    usage: import TechGen
+
+'''
+
+
+import pya
+
+
+def registerMenuItems():
+    import os
+    import SiEPIC.__init__
+
+    global ACTIONS
+    count = 0
+    menu = pya.Application.instance().main_window().menu()
+
+    import sys
+    if int(sys.version[0]) &gt; 2 and sys.platform == 'darwin':
+        extra = " Py3"
+    else:
+        extra = " Py2"
+
+    s1 = "siepic_menu"
+    if not(menu.is_menu(s1)):
+        menu.insert_menu("help_menu", s1, "SiEPIC %s" % SiEPIC.__init__.__version__ + extra)
+
+    s2 = "TechGen"
+    if not(menu.is_menu(s1 + "." + s2)):
+        menu.insert_menu(s1 + ".end", s2, "TechGen")
+    
+registerMenuItems()
+
+
+# TechGen python package
+import os, sys
+dir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "")
+
+if not dir_path in sys.path:
+  sys.path.append(dir_path)
+
+import TechGen
+import TechGen.techgen
+import TechGen.libgen
+
+# reload
+if 1:
+    import sys
+    # print (sys.version[0])
+    if int(sys.version[0]) &gt; 2:
+      from importlib import reload
+    TechGen = reload(TechGen)
+    TechGen.techgen= reload(TechGen.techgen)
+    TechGen.libgen= reload(TechGen.libgen)
+    print("Reloaded TechGen...")
+
+
+
+
+</text>
+</klayout-macro>

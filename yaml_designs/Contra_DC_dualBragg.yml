@@ -1,0 +1,18 @@
+# Contra_DC_dualBragg
+design-params:
+  n-periods-sidewall: 300
+  n-periods-swg: 260
+  grating-period: 0.318
+  swg-grating-period: 0.420
+  gap: 0.15 # microns
+  corrugation-width1: 0.03 # microns
+  corrugation-width2: 0.04 # microns
+  swg-corrugation-width: 0.04
+  anti-reflection: true
+  grating-type: false
+  waveguide1-width: 0.45 # microns
+  waveguide2-width: 0.55 # microns
+  gaussian-index: 2.8
+compact-model:
+  name: "cdc_dual_bragg"
+

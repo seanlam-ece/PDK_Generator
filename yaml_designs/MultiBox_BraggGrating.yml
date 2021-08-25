@@ -1,0 +1,13 @@
+# MultiBox-BraggGrating
+design-params:
+  period-swg: 0.24 #[um]
+  waveguide-width: 0.18
+  corrugation-width: 0.1
+  duty-cycle: 0.75
+  row-gap: 0.06
+  rows-main-wg: 3
+  length: 30
+  taper-length: 10
+  bragg-type: true
+compact-model:
+  name: "gc_multibox"

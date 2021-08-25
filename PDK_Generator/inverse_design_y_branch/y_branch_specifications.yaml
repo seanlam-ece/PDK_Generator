@@ -1,0 +1,90 @@
+# Hypothetical Waveguide Parameters for Y Branch Generation
+---
+  #Optimization Requirements 
+  optimization_reqs: 
+
+    - gain_through_single_port: -3.15 #Insertion Loss in abs(dB)
+
+ #Component Parameters 
+  component:
+      #Input Waveguide
+    - name: "input_wg"
+      x_span: 3.0e-6 #waveguide length 
+      y_span: 0.5e-6 #waveguide width
+      z_span: 220.0e-9 #waveguide height
+      x: -2.5e-6
+      y: 0
+      z: 0
+      material: "Si: non-dispersive"
+
+      #Output Waveguide (top)
+    - name: "output_wg_top"
+      x_span: 3.0e-6 #waveguide length 
+      y_span: 0.5e-6 #waveguide width
+      z_span: 220.0e-9 #waveguide height
+      x: 2.5e-6
+      y: 0.35e-6
+      z: 0
+      material: "Si: non-dispersive"
+
+      #Output Waveguide (bottom)
+    - name: "output_wg_bottom"
+      x_span: 3.0e-6 #waveguide length 
+      y_span: 0.5e-6 #waveguide width
+      z_span: 220.0e-9 #waveguide height
+      x: 2.5e-6
+      y: -0.35e-6
+      z: 0
+      material: "Si: non-dispersive"
+
+      #SiO2 layer
+    - name: "Si02"
+      x_span: 8.0e-6 #waveguide length 
+      y_span: 8.0e-6 #waveguide width
+      z_span: 10.0e-6 #waveguide height
+      x: 0
+      y: 0
+      z: 0
+      material: "SiO2: non-dispersive"
+      mesh_order: 3
+      alpha: 0.8
+  
+  #Layers
+  #NOTE: Will not be used in the fab-GROUSE run, 
+  #extracting from YAML instead
+  layers_used:
+ 
+    - material_type: "Dielectric"
+      name: "Si: non-dispersive"
+      material_name: "Si (Silicon) - Palik"
+
+    - material_type: "Dielectric"
+      name: "SiO2: non-dispersive"
+      material_name: "SiO2 (Glass) - Palik"
+      
+  #Optimization Parameters
+  optimization_variables: 
+ 
+    #Wavelength scale
+    - start: 1300.0e-9
+      stop: 1800.0e-9
+      points: 21
+      
+    #Figure of merit
+      mode_number: "fundamental TE mode"
+      direction: "Forward"
+    
+    #Optimizer
+      max_iter: 10 #Maximum Iterations of Optimizations to Run
+      method: "L-BFGS-B" #Quasi Newton Method
+      pgtol: 1.0e-5 #Gradient tolerance parameter
+      ftol: 1.0e-5 #Stops optimizations when changes in FOM are less than this
+    
+  #Simulation Variables
+  simulation_variables:
+
+    #Mode source
+    - direction: "Forward"
+      injection_axis: "x-axis"
+      center_wavelength: 1.550e-6
+      mode_selection: "fundamental TE mode"

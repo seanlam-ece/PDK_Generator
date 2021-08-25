@@ -1,0 +1,7 @@
+design-params:
+  radius: 10.0
+  width: 0.5
+layers:
+  Cladding Bottom: BOX - None
+  Cladding Top: oxide - None
+  Waveguide: Si_Npp - 24:0

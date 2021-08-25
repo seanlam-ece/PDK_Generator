@@ -1,0 +1,6 @@
+design-params:
+  mmi-length: 130.5
+  waveguide-access-length: 10.0
+  waveguide-access-width: 1.5
+  waveguide-io-width: 0.5
+  waveguide-mmi-width: 6.0

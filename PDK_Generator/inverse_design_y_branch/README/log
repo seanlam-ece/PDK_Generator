@@ -1,0 +1,41 @@
+July 1st 11:30AM:
+
+I created a class which runs the base script for the Y-Branch optimization, but I'm having some problems calling the class in the Optimization function.
+
+I have an error that states that the object for generating the base function must be a Python function/callable, a file name or a string with a Lumerical Script.
+
+July 2nd 12:19AM:
+
+Error fixed, first draft ready
+WARNING: When running the main function (main_y_branch_generation), please be aware of an approximately 1 hour runtime and heavy RAM usage.
+
+Completed:
+
+-	Run optimizations to reduce insertion loss and maximize transmission for Y-Branch Design 
+-	Outputs 
+     - P cell of the drawn Y branch with the appropriate layering saved as a GDS (individual function written and tested, 
+     will need to be integrated with layer builder)
+     - S parameters as a result of an s parameter sweep, imported to Interconnect and the scripts I’ve written will run simulations 
+     with accordance to wavelength (gain, transmission, reflection) and print out graphs on the command prompt of Spyder)
+     
+-	I’ve written code to send the s parameters as a CML component within a CML library, will be testing as soon as I obtain the CML license 
+
+To Do:
+-	Continue editing/cleaning code functions (testing the Pcell function, adding pip install for libraries, MAC/Linux Integration)
+-    Using layer builder 
+-	Importing optimization parameters from YAML
+-	Review design intent YAML format with Lukas, coworkers
+-	Integrate CML compiler, test and obtain license
+-	Creating documentation for using this script (PDF, Latex)
+
+July 8th 12:30pm
+
+- Completed optimzation/simulation/design parameter import from YAML
+- Added PIP install for different libraries 
+- Other minor bug fixes
+- Working fixed cell function, will need to integrate layers in SiEPIC-fab Grouse process 
+
+To do:
+- Waiting on Federico for Layer Builder scripts 
+- Running scripts on UBC server (running into a couple of bugs)
+- Error checking/test scripts 

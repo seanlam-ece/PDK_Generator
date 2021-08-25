@@ -1,0 +1,18 @@
+# ebeam-rib-phase-shifter
+design-params:
+  io-wg-type: 0
+  input-rib-width: 0.5 # microns
+  input-slab-width: 2 # microns
+  input-taper-length: 15 # microns
+  length: 150 # microns
+  width: 0.5 # microns
+  npp-width: 2 # microns
+  npp-si-separation: 2 # microns
+  segments: 5
+  vc-width: 5 # microns
+  vc-si-separation: 3
+  overlay-ol: 1
+  overlay-ebl: 0.05
+  metal-width: 10 # microns
+compact-model:
+  name: "phase_shifter_rib"

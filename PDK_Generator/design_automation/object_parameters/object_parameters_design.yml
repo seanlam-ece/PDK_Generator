@@ -1,0 +1,23 @@
+objects:
+- bounds_lower: 2.0e-07
+  bounds_upper: 8.0e-07
+  depth: 2.2e-07
+  direction: Forward
+  eps_in_material: 'Si: non-dispersive'
+  eps_in_mesh_order: 2
+  eps_out_material: 'SiO2: non-dispersive'
+  eps_out_mesh_order: 3
+  ftol: 1.0e-05
+  max_iter: 0
+  method: L-BFGS-B
+  mode_number: fundamental TE mode
+  monitor_name: fom
+  n_interpolation_points: 100
+  norm_p: 1
+  object_name: y_branch_1
+  pgtol: 1.0e-05
+  points: 21
+  scale_initial_gradient_to: 0.0
+  scaling_factor: 1.0e-06
+  wavelength_start: 1300e-9
+  wavelength_stop: 1800e-9

@@ -1,0 +1,118 @@
+###########################################################
+# Script file: Waveguides_FDE_dataCMLCompiler.lsf
+#
+# Description: This file can be used to extract the parameters
+#	required by the CML Compiler to build a waveguide
+#	element.
+#
+# Notes:	
+# (1) See USER-DEFINED PARAMETERS section for required input.
+#
+# Copyright 2019, Lumerical Solutions, Inc.
+###########################################################
+
+###########################################################
+
+## USER-DEFINED PARAMETERS:
+# These are parameters that must be set by the user
+
+## 1. Mode information:
+# mode_data is saved directly for use with CML Compiler 
+mode_data = cell(1);
+mode_data{1} = struct;
+mode_data{1}.ID = 1;
+mode_data{1}.name = 'TE';
+
+
+# (!) Number of the desired modes in the mode list from FDE.
+# Can be a single number (one mode) or a 2x1 array (two modes)  
+mode_numbers = [1];
+
+
+## 2. wavelength_data [m]
+# This is the desired center wavelength for the element built by 
+#the CML compiler.
+wavelength_data = 1.55e-06;
+
+
+## 3. temperature_data [K] and dneff_dT [1/K]
+# These are saved directly for use with CML Compiler (not used in the simulation)
+temperature_data = 300;
+dneff_dT = [0.001];
+
+
+## 4. Length parameters
+# These are saved directly for use with CML Compiler (not used in the simulation)
+wg_length = 10e-6; #m
+wg_length_min = 0; #m
+wg_length_max = 1; #m
+
+## 5. additional_loss
+# This loss is added to the one from the simulation to account for effects not captured in
+# simulation (for example surface roughness)
+additional_loss = [3000]; #dB/m
+
+
+#######################################################
+
+## ADDITIONAL PARAMETERS EXTRACTED FROM SIMULATION:
+
+## Run simulation to find modes and then frequency sweep at wavelength_data:
+switchtolayout;
+setanalysis("wavelength", wavelength_data);
+findmodes;
+
+n_modes = length(mode_numbers);
+if ((n_modes!=length(mode_data)) or n_modes!=length(dneff_dT) or n_modes!=length(additional_loss)){ # Check that length of arrays is consistent
+    ?"Error: Lenght of data arrays is not consistent. Check: mode_data, mode_numbers, dneff_dT, additional_loss";    
+    break;
+}
+neff = loss = ng = D = matrix(n_modes); 
+
+for(mode_ind=1:n_modes){ # Loop over selected modes
+    selectmode(mode_numbers(mode_ind));
+    setanalysis('track selected mode',1);
+    setanalysis('detailed dispersion calculation',1);
+    setanalysis('stop wavelength',wavelength_data);
+    setanalysis('number of points',1);
+    frequencysweep;
+    
+    
+    ## Extract results from frequency sweep:
+    neff(mode_ind) = real(getresult("FDE::data::frequencysweep","neff"));
+    loss(mode_ind) = additional_loss(mode_ind) + getresult("FDE::data::frequencysweep","loss"); # dB/m
+    ng(mode_ind) = c/getresult("FDE::data::frequencysweep","vg"); # m/s
+    D(mode_ind) = getresult("FDE::data::frequencysweep","D"); # s/m^2
+}
+
+ 
+## Save data for CML Compiler:
+
+?"Saving the following data for CML Compiler:";
+
+for(mode_ind=1:n_modes){ # Loop over selected modes
+    ?"mode_data{"+num2str(mode_ind)+"}.name = " +  mode_data{mode_ind}.name;
+    ?"mode_data{"+num2str(mode_ind)+"}.ID = " +  num2str(mode_data{mode_ind}.ID);
+}
+
+?"wavelength_data = 1.55e-06;" +  num2str(wavelength_data);
+?"temperature_data = " +  num2str(temperature_data); 
+?"neff = " +  num2str(neff);
+?"dneff_dT = [0.001];" +  num2str(dneff_dT);
+?"ng = " +  num2str(ng);
+?"D = " +  num2str(D);
+?"loss = " +  num2str(loss);
+?"wg_length = " +  num2str(wg_length);
+?"wg_length_min = " +  num2str(wg_length_min);
+?"wg_length_max = " +  num2str(wg_length_max);
+
+## save variables to matlab file
+matlabsave("wg_strip_straight_c.mat",
+            mode_data, wavelength_data, temperature_data, neff, dneff_dT, ng, D, loss,
+            wg_length, wg_length_min, wg_length_max);
+
+## save variables to json file
+jsonsave("wg_strip_straight_c.json",
+            mode_data, wavelength_data, temperature_data, neff, dneff_dT, ng, D, loss,
+            wg_length, wg_length_min, wg_length_max);
+            

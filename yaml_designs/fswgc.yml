@@ -1,0 +1,15 @@
+# Focusing Sub-wavelength grating coupler
+design-params:
+  wavelength: 1.55
+  cladding-index: 1.0
+  grating-effective-index: 2.75618
+  taper-angle: 35.0
+  grating-length: 15.0
+  taper-length: 19.0
+  duty-cycle: 0.488193
+  grating-period: 1.18939
+  fill-factor: 0.244319
+  waveguide-width: 0.5
+  insertion-angle: -31.0
+compact-model:
+  name: "gc_focused_swg"

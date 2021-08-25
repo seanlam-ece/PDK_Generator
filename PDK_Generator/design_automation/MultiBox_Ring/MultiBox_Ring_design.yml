@@ -1,0 +1,11 @@
+design-params:
+  angle: 360
+  bus-gap: 0.06
+  bus-length: 10
+  duty-cycle: 0.75
+  number-rows: 5
+  period: 0.24
+  radius: 35
+  row-gap: 0.06
+  taper-length: 25
+  waveguide-width: 0.18

@@ -1,0 +1,5 @@
+design-params:
+  duty-cycle: 0.7
+  length: 10.0
+  period: 0.2
+  width: 0.5

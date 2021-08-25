@@ -1,0 +1,12 @@
+# SWG-bentWG
+design-params:
+  period: 0.2
+  waveguide-width: 0.5
+  radius: 5
+  duty-cycle: 0.5
+  angle: 360
+  bus-gap: 0.06
+  Lin/Lout: 1
+  bus-type: false #(Single=False, Double=True)
+compact-model:
+  name: "wg_bent_swg"

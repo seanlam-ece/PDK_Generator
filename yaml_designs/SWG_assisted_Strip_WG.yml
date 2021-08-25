@@ -1,0 +1,9 @@
+# SWG Assisted Strip Waveguide
+design-params:
+  length: 10.0
+  period: 0.2
+  swg-width: 0.5
+  strip-width: 0.06
+  duty-cycle: 0.5
+compact-model:
+  name: "wg_strip_swg"

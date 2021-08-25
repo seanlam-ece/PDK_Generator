@@ -1,0 +1,7 @@
+# Taper TE 1550nm
+design-params:
+  waveguide-width1: 0.5
+  waveguide-width2: 3.0
+  waveguide-length: 10.0
+compact-model:
+  name: "taper_te1550"

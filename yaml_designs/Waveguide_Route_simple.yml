@@ -1,0 +1,6 @@
+# Waveguide Route Simple
+design-params:
+  radius: 5
+  width: 0.5
+compact-model:
+  name: "wg_route"

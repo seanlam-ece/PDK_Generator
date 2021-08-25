@@ -1,0 +1,13 @@
+# Bent Contra Directional Coupler
+design-params:
+  radius: 25
+  gap: 0.28
+  bus-width: 0.45
+  ring-width: 0.55
+  period: 318
+  bus-corrugation-width: 0.04
+  ring-corrugation-width: 0.05
+  num-corrugations: 135
+  bus-to-straight-bend-radius: 5
+compact-model:
+  name: "cdc_bent"

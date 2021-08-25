@@ -1,0 +1,4 @@
+design-params:
+  bend-radius: 5
+  bezier-factor: 25
+  waveguide-width: 0.5

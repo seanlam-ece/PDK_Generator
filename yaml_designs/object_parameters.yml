@@ -1,0 +1,33 @@
+###List of sample design requirements/goals
+
+objects: 
+ - object_name: "y_branch_1"
+   ##SPECTRAL RANGE
+   wavelength_start: 1300e-9
+   wavelength_stop: 1800e-9
+   points: 21
+   ##OPTIMIZABLE GEOMETRY
+   n_interpolation_points: 100
+   bounds_lower: 0.2e-6
+   bounds_upper: 0.8e-6
+   eps_in_material: "Si: non-dispersive"
+   eps_in_mesh_order: 2
+   eps_out_material: "SiO2: non-dispersive"
+   eps_out_mesh_order: 3
+   depth: 220.0e-9
+   ##FIGURE OF MERIT
+   monitor_name: "fom"
+   mode_number: "fundamental TE mode"
+   direction: "Forward"
+   norm_p: 1
+   ##OPTIMIZER
+   scaling_factor: 1.0e-6
+   max_iter: 0
+   method: "L-BFGS-B"
+   pgtol: 1.0e-5
+   ftol: 1.0e-5
+   scale_initial_gradient_to: 0.0
+   
+   
+   
+   

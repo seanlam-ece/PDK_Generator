@@ -1,0 +1,214 @@
+# Photonic Model Info
+Photonic Models:
+  container_element:
+    param_vars:
+      top_parameters:
+        name: string
+        category: string
+        type: ["Number", "String"]
+        kind: string
+        unit: string
+        choices: string
+        annotate: bool
+        default_value: number
+        min: number
+        max: number
+      selection_code: string
+      sub_element_parameters:
+        name: string
+        category: string
+        type: ["Number", "String"]
+        kind: string
+        unit: string
+        choices: string
+        annotate: bool
+        default_value: number
+        min: number
+        max: number
+  phase_shifter_electrical:
+    param_vars:
+      L_active_name: string
+      L_active_unit: string
+      L_active_visible_to_user: bool
+      temperature: string
+  phase_shifter_thermal:
+    param_vars:
+      wg_length_name: string
+      wg_length_unit: string
+      wg_length_visible_to_user: bool
+      temperature: string
+  electro_absorption_modulator:
+    param_vars:
+      temperature: string
+  mach_zehnder_modulator:
+    param_vars:
+      wg_length: string
+      imbalance_length: bool
+      longer_arm: number
+      temperature: string
+  sparsweep_pcell:
+    param_vars:
+      parameters:
+        name: string
+        category: string
+        type: ["Number", "ComboChoice"]
+        kind: string
+        unit: string
+        min: number
+        max: number
+        choices: string
+        annotate: bool
+        default_value: number
+        visible_to_user: bool
+        test_min: number
+        test_max: number
+      temperature: string
+  photodetector_simple:
+    param_vars:
+      temperature: string
+  ring_modulator:
+    param_vars:
+      lock_resonant_wavelength: bool
+      lock_FSR: bool
+      lock_IL_and_Q_at_resonance: bool
+      lock_mod_eff: bool
+      lock_mod_eff_thermal: bool
+  waveguide_simple:
+    param_vars:
+      wg_length_name: string
+      wg_length_unit: string
+      wg_length_visible_to_user: bool
+      temperature: string
+  wg_parameterized:
+    param_vars:
+      parameters:
+        name: string
+        category: string
+        kind: string
+        unit: string
+        annotate: bool
+        visible_to_user: bool
+        value: number
+        default_value: number
+        min: number
+        max: number
+        expression: number
+        reciprocal_veriloga: bool
+      length_props:
+        name: string
+        category: string
+        kind: string
+        unit: string
+        annotate: bool
+        visible_to_user: bool
+        default_value: number
+        min: number
+        max: number
+      
+  
+# Template to Photonic Model Mapping
+Container:
+  template: container_example
+  photonic_model: container_element
+Directional Coupler (Fixed):
+  template: dc_strip_te_c
+  photonic_model: spar_fixed
+Directional Coupler (Parameterized):
+  template: pdc_strip_c
+  photonic_model: directional_coupler_parameterized
+Electrical Phase Shifter (Statistical):
+  template: ps_pn_stat_te_c
+  photonic_model: phase_shifter_electrical
+Electrical Phase Shifter (Lumped):
+  template: ps_pn_te_c
+  photonic_model: phase_shifter_electrical
+Electrical Phase Shifter (Travelling Wave):
+  template: ps_pn_tw_te_c
+  photonic_model: phase_shifter_electrical
+Electro-absorption Modulator:
+  template: eam_te_c
+  photonic_model: electro_absorption_modulator
+Grating Coupler (Fitted):
+  template: gc_fitted_te_c
+  photonic_model: grating_coupler
+Grating Coupler (Fixed):
+  template: gc_strip_te_c
+  photonic_model: spar_fixed
+Grating Coupler (Statistical):
+  template: gc_fitted_stat_te_c
+  photonic_model: grating_coupler
+Mach-Zehnder Modulator (Physical Statistical):
+  template: mzm_stat_unbalanced_te_c
+  photonic_model: mach_zehnder_modulator
+Mach-Zehnder Modulator (Figure of Merit Statistical):
+  template: mzm_stat_fom_unbalanced_te_c
+  photonic_model: mach_zehnder_modulator
+Mach-Zehnder Modulator (Lumped):
+  template: mzm_unbalanced_te_c
+  photonic_model: mach_zehnder_modulator
+Mach-Zehnder Modulator (Travelling Wave):
+  template: mzm_unbalanced_tw_te_c
+  photonic_model: mach_zehnder_modulator
+MMI (Fixed):
+  template: mmi_1x2_strip_te_c
+  photonic_model: spar_fixed
+MMI (Statistical):
+  template: mmi_1x2_stat_strip_te_c
+  photonic_model: sparsweep_pcell
+MMI (Temperature Dependent):
+  template: mmi_1x2_strip_te_c_thermal
+  photonic_model: sparsweep_pcell
+Photodetector (Statistical):
+  template: pd_stat_c
+  photonic_model: photodetector_simple
+Photodetector:
+  template: pd_c
+  photonic_model: photodetector_simple
+Ring Modulator (Physical Statistical):
+  template: rm_stat_strip_te_c
+  photonic_model: ring_modulator
+Ring Modulator (Figure of Merit Statistical):
+  template: rm_stat_fom_strip_te_c
+  photonic_model: ring_modulator
+Ring Modulator:
+  template: rm_strip_te_c
+  photonic_model: ring_modulator
+Scripted Waveguide:
+  template: scripted_wg
+  photonic_model: scripted_element
+Thermal Phase Shifter (Statistical):
+  template: ps_thermal_stat_te_c
+  photonic_model: phase_shifter_thermal
+Thermal Phase Shifter:
+  template: ps_thermal_te_c
+  photonic_model: phase_shifter_thermal
+Waveguide Arc (Fixed):
+  template: wg_strip_arc_c
+  photonic_model: waveguide_simple
+Waveguide Arc (Parameterized):
+  template: wg_strip_arc_parameterized
+  photonic_model: wg_parameterized
+Waveguide Back Annotation:
+  template: wg_back_annotation
+  photonic_model: waveguide_back_annotation
+Waveguide Bend 90:
+  template: wg_bend_90
+  photonic_model: wg_parameterized
+Waveguide S-Bend (Fixed):
+  template: wg_strip_sbend_c
+  photonic_model: waveguide_simple
+Waveguide S-Bend (Parameterized):
+  template: wg_strip_sbend_parameterized
+  photonic_model: wg_parameterized
+Waveguide Straight (Fixed):
+  template: wg_strip_straight_c
+  photonic_model: waveguide_simple
+Waveguide Straight (Parameterized):
+  template: wg_strip_straight_parameterized
+  photonic_model: wg_parameterized
+Waveguide Straight (Statistical):
+  template: wg_stat_strip_straight_c
+  photonic_model: waveguide_simple
+Waveguide Taper (Parameterized):
+  template: ptaper_strip_c
+  photonic_model: sparsweep_pcell

@@ -1,0 +1,9 @@
+# Test Struct Double Bus Ring 2
+design-params:
+  radius: 10.0
+  width: 0.5
+  gap: 0.2
+  num-points: 500
+  text-polygon: 1 # Draw text polygon label? 1/0
+compact-model:
+  name: "ring_test_struct_double_bus2"

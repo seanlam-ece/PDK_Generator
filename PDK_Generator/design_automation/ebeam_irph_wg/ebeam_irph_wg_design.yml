@@ -1,0 +1,13 @@
+design-params:
+  Metal-Si-Separation: 4
+  Metal-Width: 10
+  N-Width: 22
+  Npp-Si-Separation: 2
+  Npp-Width: 10
+  Overlay-EBL: 0.05
+  Overlay-OL: 1
+  VC-Si-Separation: 5
+  VC-Width: 5
+  Waveguide-Length: 100
+  Waveguide-Rib-Width: 24
+  Waveguide-Width: 0.5

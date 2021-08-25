@@ -1,0 +1,6 @@
+design-params:
+  duty-cycle: 0.5
+  length: 10.0
+  period: 0.2
+  strip-width: 0.06
+  swg-width: 0.5

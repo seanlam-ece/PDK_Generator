@@ -1,0 +1,16 @@
+# Contra-DC-custom
+design-params:
+  n-periods: 300
+  grating-period1: 0.318
+  grating-period2: 0.318
+  gap: 0.15 # microns
+  corrugation-width1-outer: 0.03 # microns
+  corrugation-width1-inner: 0.04 # microns
+  corrugation-width2-outer: 0.01
+  corrugation-width2-inner: 0.01
+  waveguide1-width: 0.45 # microns
+  waveguide2-width: 0.55 # microns
+  gaussian-index: 2.8
+compact-model:
+  name: "cdc_custom"
+

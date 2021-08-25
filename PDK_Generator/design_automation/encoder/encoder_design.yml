@@ -1,0 +1,17 @@
+design-params:
+  binary-size: 10000000
+  corrugation-widths:
+  - 0.08
+  - 0.06
+  - 0.04
+  - 0.02
+  - 0.02
+  - 0.04
+  - 0.06
+  - 0.08
+  length: 200
+  num-bits: 8
+  start-period: 0.314
+  stop-period: 0.342
+  sum-format: 3
+  wg-width: 0.5

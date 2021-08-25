@@ -1,0 +1,11 @@
+# EBeam Bragg Apodized
+design-params:
+  n-periods: 300
+  grating-period: 0.317 # microns
+  corrugation-width: 0.03 # microns
+  misalignment: 0.0 # microns
+  grating-type: false # Rectangular = False, Sinusoidal = True
+  waveguide-width: 0.45 # microns
+  gaussian-index: 3
+compact-model:
+  name: "bragg_apodized"

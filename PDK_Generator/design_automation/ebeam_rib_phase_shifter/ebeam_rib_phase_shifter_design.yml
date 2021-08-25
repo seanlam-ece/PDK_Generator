@@ -1,0 +1,15 @@
+design-params:
+  input-rib-width: 0.5
+  input-slab-width: 2
+  input-taper-length: 15
+  io-wg-type: 0
+  length: 150
+  metal-width: 10
+  npp-si-separation: 2
+  npp-width: 2
+  overlay-ebl: 0.05
+  overlay-ol: 1
+  segments: 5
+  vc-si-separation: 3
+  vc-width: 5
+  width: 0.5

@@ -1,0 +1,5 @@
+design-params:
+  rib-wg-width1: 0.35
+  rib-wg-width2: 3
+  strip-wg-width: 0.35
+  wg-length: 10

@@ -1,0 +1,6 @@
+# Waveguide Bend
+design-params:
+  radius: 10.0
+  waveguide-width: 0.5
+compact-model:
+  name: "wg_bend"

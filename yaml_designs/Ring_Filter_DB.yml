@@ -1,0 +1,9 @@
+# Ring Filter DB
+design-params:
+  radius: 10.0
+  waveguide-width: 0.5
+  gap: 0.2
+  gap-monitor: 0.5
+compact-model:
+  name: "ring_filter_double_bus"
+  

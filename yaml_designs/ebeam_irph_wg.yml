@@ -1,0 +1,16 @@
+# ebeam_irph_wg
+design-params:
+  Waveguide-Width: 0.5
+  Waveguide-Rib-Width: 24
+  Waveguide-Length: 100
+  N-Width: 22
+  Npp-Width: 10
+  Npp-Si-Separation: 2
+  VC-Si-Separation: 5
+  VC-Width: 5
+  Metal-Si-Separation: 4
+  Metal-Width: 10
+  Overlay-OL: 1
+  Overlay-EBL: 0.05
+compact-model:
+  name: "wg_irph"

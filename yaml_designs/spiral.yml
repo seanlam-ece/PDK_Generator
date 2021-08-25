@@ -1,0 +1,9 @@
+# Spiral
+design-params:
+  waveguide-length: 10.0
+  waveguide-width: 0.5
+  min-radius: 5.0
+  waveguide-spacing: 1.0
+  ports-same-side: 0
+compact-model:
+  name: "spiral"

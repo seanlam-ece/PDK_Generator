@@ -1,0 +1,5 @@
+# DC TE 1550
+design-params:
+  coupler-length: 10.0 # microns
+compact-model:
+  name: "dc_te1550"

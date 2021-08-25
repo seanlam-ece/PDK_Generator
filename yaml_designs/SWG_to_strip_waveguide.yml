@@ -1,0 +1,15 @@
+# SWG to Strip Waveguide
+design-params:
+  wavelength: 1310
+  fishbone: false
+  waveguide-length: 10.0
+  strip-taper-length-fraction: 1 # 0 to 1
+  swg-period-strip-end: 0.2
+  swg-period-swg-end: 0.2
+  strip-waveguide-width-taper-end: 0.5
+  swg-waveguide-width-end: 0.5
+  nanotaper-width-taper-end: 0.06
+  swg-duty-cycle-strip-end: 0.5 # 0 to 1
+  swg duty-cycle-swg-end: 0.7 # 0 to 1
+compact-model:
+  name: "wg_swg_to_strip"

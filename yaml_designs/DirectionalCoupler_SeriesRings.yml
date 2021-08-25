@@ -1,0 +1,9 @@
+# Directional Coupler Series Rings
+design-params:
+  upper-ring-radius: 3
+  lower-ring-radius: 3
+  waveguide-width: 0.5
+  gap: 0.2
+  coupler-length: 0.0
+compact-model:
+  name: "contra_dc_series_rings"

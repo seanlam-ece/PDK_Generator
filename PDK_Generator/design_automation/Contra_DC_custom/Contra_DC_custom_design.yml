@@ -1,0 +1,12 @@
+design-params:
+  corrugation-width1-inner: 0.04
+  corrugation-width1-outer: 0.03
+  corrugation-width2-inner: 0.01
+  corrugation-width2-outer: 0.01
+  gap: 0.15
+  gaussian-index: 2.8
+  grating-period1: 0.318
+  grating-period2: 0.318
+  n-periods: 300
+  waveguide1-width: 0.45
+  waveguide2-width: 0.55

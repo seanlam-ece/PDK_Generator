@@ -1,0 +1,8 @@
+design-params:
+  corrugation-width: 0.03
+  gaussian-index: 3
+  grating-period: 0.317
+  grating-type: false
+  misalignment: 0.0
+  n-periods: 300
+  waveguide-width: 0.45

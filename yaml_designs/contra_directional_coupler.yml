@@ -1,0 +1,17 @@
+# Contra Directional Coupler
+design-params:
+  n-periods: 300
+  grating-period: 0.317 # microns
+  gap: 0.15 # microns
+  corrugation-width1: 0.03 # microns
+  corrugation-width2: 0.04 # microns
+  anti-reflection: true
+  grating-type: false # Rectangular = False, Sinusoidal = True
+  waveguide1-width: 0.45 # microns
+  waveguide2-width: 0.55 # microns
+  apodization-index: 2.8
+  port-waveguide-width: 0.5 # microns
+simulation-params:
+  accuracy: true # on = high, off = fast
+compact-model:
+  name: "contra_dc"

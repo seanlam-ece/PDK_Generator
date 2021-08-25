@@ -1,0 +1,27 @@
+'''
+This file is part of SiEPIC-Tools and {orig_techname} PDK
+
+NOTE: After changing code, macro needs to be rerun to install new implementation.
+The macro is set to "autorun" to install PCells when KLayout is run.
+
+WARNING: This library may have nested PCells. Running this macro with a layout open
+may cause it to crash. Close the layout first before running.
+'''
+
+import math
+from SiEPIC.utils import get_technology, get_technology_by_name
+
+# Import KLayout Python API methods:
+# Box, Point, Polygon, Text, Trans, LayerInfo, etc
+from pya import *
+import os, sys
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+if dir_path not in sys.path:
+    sys.path.append(dir_path)
+
+from {function_techname}_Library import *
+
+{function_techname}_Dev()
+{function_techname}_Mature()

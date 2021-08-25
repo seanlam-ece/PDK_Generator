@@ -1,0 +1,14 @@
+design-params:
+  anti-reflection: true
+  corrugation-width1: 0.03
+  corrugation-width2: 0.04
+  gap: 0.15
+  gaussian-index: 2.8
+  grating-period: 0.318
+  grating-type: false
+  n-periods-sidewall: 300
+  n-periods-swg: 260
+  swg-corrugation-width: 0.04
+  swg-grating-period: 0.42
+  waveguide1-width: 0.45
+  waveguide2-width: 0.55

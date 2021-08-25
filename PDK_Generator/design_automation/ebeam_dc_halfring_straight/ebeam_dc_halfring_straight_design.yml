@@ -1,0 +1,6 @@
+design-params:
+  coupler-length: 0.0
+  gap: 0.2
+  orthogonal-id: 1
+  radius: 10
+  waveguide-width: 0.5

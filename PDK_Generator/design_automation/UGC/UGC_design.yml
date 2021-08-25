@@ -1,0 +1,12 @@
+design-params:
+  cladding-index: 1.444
+  design-wavelength: 1.55
+  duty-cycle: 0.5
+  etch-depth: 0.13
+  grating-length: 15
+  insertion-angle: -31.0
+  polarization: TE
+  taper-angle: 35
+  taper-length: 19
+  waveguide-width: 0.5
+  wg-thickness: 0.22

@@ -1,0 +1,8 @@
+# EBeam DC Halfring Arc
+design-params:
+  radius: 10.0
+  waveguide-width: 0.5
+  gap: 0.2
+  coupler-length: 0.0
+compact-model:
+  name: "dc_halfring_arc"

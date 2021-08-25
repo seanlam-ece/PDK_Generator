@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>Generate Library</description>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut>Ctrl+L</shortcut>
+ <show-in-menu>true</show-in-menu>
+ <group-name/>
+ <menu-path>siepic_menu.TechGen.begin</menu-path>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>from pya import QDialog, QGridLayout, QLabel, QComboBox, QGroupBox, QVBoxLayout, QDialogButtonBox, QFileDialog, QFont, QMessageBox, Technology
+import os
+import sys
+
+from SiEPIC._globals import KLAYOUT_VERSION
+
+try:
+    from techgen import libgen
+except:
+    if os.path.dirname(os.path.abspath(__file__)) not in sys.path:
+        sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'python', 'techgen'))
+    else:
+        print("Path to TechGen already in sys.path")
+    from techgen import libgen
+
+class TechSelectionDialog(QDialog):
+
+    def __init__(self):
+        super(TechSelectionDialog, self).__init__()
+        
+        self.techname = ""
+    
+        self.setWindowTitle("LibGen: Select Technology")
+        self.resize(400, 120)
+        self.groupBox = QGroupBox("Select technology for library generation")
+    
+        layout = QVBoxLayout(self)
+        self.setLayout(layout)
+
+        # Create drop down menu
+        self.tech_choices = QComboBox()
+        ind = 0
+        for techname in Technology.technology_names():
+            self.tech_choices.addItem("{}".format(techname))
+        self.tech_choices.activated(self.update_tech_name)
+        layout.addWidget(self.tech_choices)
+            
+        # Create group box around labels and drop down menu
+        self.groupBox.setLayout(layout)
+        vbox = QVBoxLayout()
+        vbox.addWidget(self.groupBox)
+        
+        # Create OK and Cancel buttons
+        self.button = QDialogButtonBox().new_buttons(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        self.button.accepted(self.ok_clicked)
+        self.button.rejected(self.cancel_clicked)
+        vbox.addWidget(self.button)
+        self.setLayout(vbox)
+        
+    def update_tech_name(self):
+        self.techname = self.tech_choices.currentText
+        print(self.techname)
+        
+    def ok_clicked(self):
+        self.techname = self.tech_choices.currentText
+        print(self.techname)
+        print("Closing window...\n")
+        self.accept()
+    
+    def cancel_clicked(self):
+        print("Closing window...\n")
+        self.reject()
+        
+if KLAYOUT_VERSION &gt; 24:
+    tech_select_dialog = TechSelectionDialog()
+    if tech_select_dialog.exec_() and tech_select_dialog.techname:
+        curr_tech = Technology().technology_by_name(tech_select_dialog.techname)
+        tech_folder = curr_tech.base_path()
+        libgen.generate_library(tech_select_dialog.techname, tech_folder)
+    else:
+        print(tech_select_dialog.techname)
+        msg = pya.QMessageBox()
+        msg.setWindowTitle("LibGen")
+        msg.setText("No library generated.")
+        msg.exec_()
+</text>
+</klayout-macro>

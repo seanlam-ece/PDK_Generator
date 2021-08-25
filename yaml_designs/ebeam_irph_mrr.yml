@@ -1,0 +1,16 @@
+# ebeam_irph_mrr
+design-params:
+  Radius: 15
+  Waveguide-Width: 0.5
+  Gap: 0.156
+  N-Width: 31
+  N-Start-Theta: -25
+  N-Stop-Theta: 115
+  Npp-Si-Separation: 2
+  Npp-Donut-Width: 13.5
+  VC-Center-Radius: 5.75
+  VC-Arc-Width: 5
+  Metal-Center-Radius: 10
+  Metal-Arc-Width: 11
+compact-model:
+  name: "mrr_irph" 

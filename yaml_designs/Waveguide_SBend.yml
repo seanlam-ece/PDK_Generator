@@ -1,0 +1,9 @@
+# Waveguide S Bend
+design-params:
+  length: 10.0
+  height: 2.0
+  width: 0.5
+  radius: 5.0
+compact-model:
+  name: "wg_sbend"
+  

@@ -1,0 +1,107 @@
+##################################################################
+
+# Copyright (c) 2003-2020, Ansys, Inc. All rights reserved.  
+
+# Unauthorized use, distribution, or duplication is prohibited.  
+# This product is subject to U.S. laws governing export and re-export.  
+
+# For full Legal Notice, see documentation.
+
+##################################################################
+
+### PORT DEFINITION ###
+# Notes: We strongly recommend using the following port names.
+
+ports = cell(2);
+p = struct; p.name = "opt_1";    p.dir = "Bidirectional"; p.type = "Optical Signal";    p.pos = "Left"; p.loc = 0.5; ports{1} = p;
+p = struct; p.name = "opt_2";    p.dir = "Bidirectional"; p.type = "Optical Signal";    p.pos = "Top"; p.loc = 0.5; ports{2} = p;
+
+opt_1_RELAY = 1; # Optical input/output 1
+opt_2_RELAY = 2; # Optical input/output 2
+
+### PARAMETER INFORMATION ###
+
+# Parameter for waveguide length:
+wg_length_name = "wg_length"; # Name
+wg_length_unit = "um"; # Unit
+wg_length_visible_to_user = false; # Flag to enable if waveguide length property is available to the user. If not, the default value will be used.
+
+
+### OTHER PROPERTIES ###
+
+# General
+model = "{model_name}"; # must match directory name
+description = "{techname} fixed strip waveguide arc {TEM_mode} mode";	# Please give a brief description, e.g., "Strip Waveguide - Supporting TE & TM modes"
+prefix = "WG";
+
+# Thermal
+temperature = "%temperature%";	# Inherit from Root Element. Otherwise, provide the value in K. For example: temperature = 300;
+
+# CML/notes		# Feel free to add notes as you see fit
+# Warning: Do not use as property the name of an existing parameter
+notes = cell(1);
+
+notes{1} = struct;
+notes{1}.property = "central_wavelength";
+notes{1}.value = "{wavelength}";
+
+# notes{2} = struct; 		# Please follow the same syntax as notes{1}
+
+
+### FOUNDRY DATA ###
+# Notes: This will be provided in external file
+
+data_filename = "{datafile}";    # must include the file extension (.mat or .json)
+
+    # identify file type
+    datafile_extension = splitstring(data_filename,".");
+    temp = length(datafile_extension);
+    datafile_extension = datafile_extension{temp};
+    
+    #load data
+    if(datafile_extension=="mat"){
+    matlabload(source_directory +"/" + data_filename);
+    }
+    
+    else{
+    jsonload(source_directory +"/" + data_filename);
+    }
+    
+wg_length = radius * theta;
+wg_length_min = 0;
+wg_length_max = 1;
+
+
+##################################################################
+
+### ADVANCED SETTINGS ###
+
+# Time domain settings 
+number_of_taps_estimation="disabled"; # Options: "disabled" [recommended] or "group delay"
+# number_of_taps_estimation: This is a digital filter setting that affects the time domain model. The frequency domain model is unaffected.
+# "disabled" : The time domain model will attempt to capture the following frequency dependence of the propagation constant, beta, and the loss
+#        beta(f) = 2*pi*neff(f0)*f0/c + 2*pi*ng(f0)/c*(f-f0)
+#        loss(f) = loss(f0)
+#     where f is the frequency, f0 is the center frequency of the simulation. 
+#     The propagation constant and loss will be most accurate near f0 and will deviate the most at the edges of the
+#     simulation bandwidth. The accuracy will improve as the simulation sample rate is increased because the higher simulation bandwidth
+#     results in a smaller time step, dt. The accuracy will also improve for longer waveguides. In some cases, where the
+#     group delay of the specified waveguide length happens to be an exact multiple of dt, beta and loss (as described above) will be fully accurate across
+#     the entire simulated bandwidth.
+#     This is the recommended setting as it most accurately captures the most important effects of photonic waveguides
+#     in time domain simulation: the phase delay (neff), group delay (ng) and loss which are related to tuning, FSR, Q, IL and other 
+#     key parameters in many devices.
+# "group delay" : The time domain model will attempt to capture the frequency dependence of neff, ng, dispersion and loss exactly as they
+#     are calculated in a frequency domain simulation, over the entire simulated bandwidth. As a result, this may compromise
+#     the accuracy of neff and ng (including at the center frequency), and can result in undesirable effects such as amplification of
+#     the optical signal at some frequencies. This setting is therefore not recommended.
+#     For best results, a high simulation sample rate may be required. Also, the accuracy will improve for longer waveguides and
+#     this setting may be desired for ultra-long waveguides (in devices without feedback) where dispersion could be important.
+
+# QA settings:
+min_wavelength = {wavelength} - 20e-9;
+max_wavelength = {wavelength} + 20e-9;
+loss_tolerance = 1e-6;
+neff_tolerance = 1e-5;
+ng_tolerance = 1.5e-3;
+delay_time_tolerance = 1e-2;

@@ -1,0 +1,9 @@
+# Strip to Slot
+design-params:
+  radius: 10.0
+  waveguide-width: 0.5
+  gap: 0.2
+  coupler-length: 0.0
+  orthogonal-id: 1 # 1 = TE, 2 = TM
+compact-model:
+  name: "wg_strip_to_slot"

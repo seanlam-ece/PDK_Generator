@@ -1,0 +1,14 @@
+design-params:
+  anti-reflection: true
+  apodization-index: 2.8
+  corrugation-width1: 0.03
+  corrugation-width2: 0.04
+  gap: 0.15
+  grating-period: 0.317
+  grating-type: false
+  n-periods: 300
+  port-waveguide-width: 0.5
+  waveguide1-width: 0.45
+  waveguide2-width: 0.55
+simulation-params:
+  accuracy: true

@@ -1,0 +1,8 @@
+# SWG Waveguide
+design-params:
+  length: 10.0
+  period: 0.2
+  width: 0.5
+  duty-cycle: 0.7
+compact-model:
+  name: "wg_swg"

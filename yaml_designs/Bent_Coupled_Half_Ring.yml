@@ -1,0 +1,10 @@
+# Bent Coupled Half Ring
+design-params:
+  radius: 10
+  bus-radius: 5
+  gap: 0.2
+  bus-width: 0.5
+  ring-width: 0.5
+  bend-angle: 45
+compact-model:
+  name: "half_ring_bend_coupled"

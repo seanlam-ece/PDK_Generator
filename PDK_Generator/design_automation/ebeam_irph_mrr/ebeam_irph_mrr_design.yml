@@ -1,0 +1,13 @@
+design-params:
+  Gap: 0.156
+  Metal-Arc-Width: 11
+  Metal-Center-Radius: 10
+  N-Start-Theta: -25
+  N-Stop-Theta: 115
+  N-Width: 31
+  Npp-Donut-Width: 13.5
+  Npp-Si-Separation: 2
+  Radius: 15
+  VC-Arc-Width: 5
+  VC-Center-Radius: 5.75
+  Waveguide-Width: 0.5

@@ -1,0 +1,6 @@
+design-params:
+  min-radius: 5.0
+  ports-same-side: 0
+  waveguide-length: 10.0
+  waveguide-spacing: 1.0
+  waveguide-width: 0.5

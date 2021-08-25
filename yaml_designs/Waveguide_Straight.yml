@@ -1,0 +1,6 @@
+# Waveguide Straight
+design-params:
+  length: 10000
+  width: 500
+compact-model:
+  name: "wg_straight"

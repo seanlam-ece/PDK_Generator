@@ -1,0 +1,5 @@
+design-params:
+  radius: 10
+  start-angle: 0
+  stop-angle: 45
+  width: 0.5

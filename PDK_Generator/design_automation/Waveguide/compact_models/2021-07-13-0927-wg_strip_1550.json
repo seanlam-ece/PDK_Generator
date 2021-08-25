@@ -1,0 +1,25 @@
+
+{
+  "D" : -0.0002475125194385197,
+  "dneff_dT" : 0.00018,
+  "loss" : 300,
+  "mode_data" : 
+  {
+    "_data" : 
+    [
+      
+      {
+        "ID" : 1,
+        "name" : "TE"
+      }
+    ],
+    "_type" : "cell"
+  },
+  "neff" : 2.44386639186945,
+  "ng" : 4.056824018811415,
+  "temperature_data" : 300,
+  "wavelength_data" : 1.55e-06,
+  "wg_length" : 1e-05,
+  "wg_length_max" : 1,
+  "wg_length_min" : 0
+}

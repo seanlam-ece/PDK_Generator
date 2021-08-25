@@ -1,0 +1,9 @@
+# Ring
+design-params:
+  width: 0.5
+  radius: 10.0
+layers:
+  Waveguide: ''
+compact-model:
+  name: "ring"
+  

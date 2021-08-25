@@ -1,0 +1,7 @@
+process: 'SiEPICfab-Grouse-Process'
+components-in-process:
+  SiEPICfab-Grouse-Base-Dev:
+    - 'Waveguide'
+components-to-compile:
+  SiEPICfab-Grouse-Base-Dev:
+    - 'Waveguide'

@@ -1,0 +1,5 @@
+# Bragg_Straight_from_file
+design-params:
+  port-waveguide-width: 0.5
+compact-model:
+  name: "bragg_from_file"

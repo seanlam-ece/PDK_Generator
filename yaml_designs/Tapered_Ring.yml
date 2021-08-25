@@ -1,0 +1,7 @@
+# Tapered Ring
+design-params:
+  top-width: 0.5
+  bottom-width: 2
+  radius: 10
+compact-model:
+  name: "ring_tapered"

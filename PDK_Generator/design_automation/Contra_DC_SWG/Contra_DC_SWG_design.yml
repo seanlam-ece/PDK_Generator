@@ -1,0 +1,10 @@
+design-params:
+  duty-cycle: 0.5
+  gaussian-index: 2.7
+  grating-period: 0.24
+  min-gap: 0.15
+  n-periods: 300
+  waveguide-1-corrugation: 0.03
+  waveguide-1-width: 0.45
+  waveguide-2-corrugation: 0.04
+  waveguide-2-width: 0.55

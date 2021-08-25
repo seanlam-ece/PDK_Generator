@@ -1,0 +1,9 @@
+design-params:
+  Lin/Lout: 1
+  angle: 360
+  bus-gap: 0.06
+  bus-type: false
+  duty-cycle: 0.5
+  period: 0.2
+  radius: 5
+  waveguide-width: 0.5

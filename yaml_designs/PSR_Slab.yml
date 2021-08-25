@@ -1,0 +1,7 @@
+# Wireguide
+design-params:
+  width: 0.5
+  widths: [0.5]
+  offsets: [0]
+compact-model:
+  name: "psr_slab"

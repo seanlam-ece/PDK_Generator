@@ -1,0 +1,46 @@
+import os, sys
+from pathlib import Path
+import SiEPIC
+import math
+from {function_techname}_tech_tools.layout_functions import layout_Ring, layout_pgtext, layout_waveguide_abs, layout_waveguide_rel, linspace_without_numpy, pin
+from {function_techname}_tech_tools.drc_parser import DRC, drc_yaml_file_location
+try: 
+  import siepic_tools
+except:
+  pass
+
+op_tag = "" #operation tag which defines whether we are loading library in script or GUI env
+
+try:
+  # import pya from klayout
+  import pya
+  if("Application" in str(dir(pya))):
+    from SiEPIC.utils import get_technology_by_name, get_technology, arc, arc_xy, arc_wg, arc_to_waveguide, points_per_circle
+    from SiEPIC._globals import PIN_LENGTH
+    from SiEPIC.extend import to_itype
+    op_tag = "GUI" 
+    #import pya functions
+  else:
+    raise ImportError
+
+except:
+  import klayout.db as pya
+  from zeropdk import Tech
+  op_tag = "script" 
+  lyp_filepath = Path(str(Path(os.path.dirname(os.path.realpath(__file__))).parent) + r"/{orig_techname}.lyp")
+  print(lyp_filepath)
+
+from pya import Box, Point, Polygon, Text, Trans, LayerInfo, \
+    PCellDeclarationHelper, DPoint, DPath, Path, ShapeProcessor, \
+    Library, CellInstArray, Region, DPolygon
+
+path = os.path.dirname(os.path.abspath(__file__))
+
+# import all pcells in the directory
+for py in [f[:-3] for f in os.listdir(path) if f.endswith('.py') and f != '__init__.py']:
+  mod = __import__('.'.join([__name__, py]), fromlist=[py])
+  classes = [getattr(mod, x) for x in dir(mod) if isinstance(getattr(mod, x), type)]
+  for cls in classes:
+      setattr(sys.modules[__name__], cls.__name__, cls)
+
+      

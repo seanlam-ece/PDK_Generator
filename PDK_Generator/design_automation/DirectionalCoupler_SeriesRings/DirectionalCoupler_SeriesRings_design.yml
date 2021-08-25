@@ -1,0 +1,6 @@
+design-params:
+  coupler-length: 0.0
+  gap: 0.2
+  lower-ring-radius: 3
+  upper-ring-radius: 3
+  waveguide-width: 0.5

@@ -1,0 +1,16 @@
+# Contra-DC-chirped
+design-params:
+  n-periods: 3000
+  grating-period-start: 0.312
+  grating-period-end: 0.328
+  gap: 0.15 # microns
+  corrugation-width1: 0.03 # microns
+  corrugation-width2: 0.04 # microns
+  anti-reflection: true
+  grating-type: false # Rectangular = False, Sinusoidal = True
+  waveguide1-width: 0.45 # microns
+  waveguide2-width: 0.55 # microns
+  gaussian-index: 0
+compact-model:
+  name: "cdc_chirped"
+

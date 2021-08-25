@@ -1,0 +1,14 @@
+# MultiBox-Ring
+design-params:
+  period: 0.24 #[um]
+  waveguide-width: 0.18
+  radius: 35
+  duty-cycle: 0.75
+  angle: 360
+  row-gap: 0.06
+  bus-gap: 0.06
+  number-rows: 5
+  bus-length: 10
+  taper-length: 25
+compact-model:
+  name: "ring_multibox"

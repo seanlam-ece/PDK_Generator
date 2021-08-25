@@ -1,0 +1,10 @@
+design-params:
+  bragg-type: true
+  corrugation-width: 0.1
+  duty-cycle: 0.75
+  length: 30
+  period-swg: 0.24
+  row-gap: 0.06
+  rows-main-wg: 3
+  taper-length: 10
+  waveguide-width: 0.18

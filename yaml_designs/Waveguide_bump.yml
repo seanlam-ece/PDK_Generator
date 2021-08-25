@@ -1,0 +1,7 @@
+# Waveguide Bump
+design-params:
+  waveguide-length: 10.0
+  waveguide-angle: 5.0
+  waveguide-width: 0.5
+compact-model:
+  name: "wg_bump"

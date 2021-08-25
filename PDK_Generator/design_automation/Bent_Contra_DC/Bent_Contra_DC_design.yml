@@ -1,0 +1,10 @@
+design-params:
+  bus-corrugation-width: 0.04
+  bus-to-straight-bend-radius: 5
+  bus-width: 0.45
+  gap: 0.28
+  num-corrugations: 135
+  period: 318
+  radius: 25
+  ring-corrugation-width: 0.05
+  ring-width: 0.55

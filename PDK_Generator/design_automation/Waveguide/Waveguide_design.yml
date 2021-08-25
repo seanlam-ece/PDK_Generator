@@ -1,0 +1,34 @@
+compact-model:
+  bend-loss: 1.57
+  dneff-dT: 0.00018
+  name: wg_strip_sio2_clad_te1310
+  photonic-model: waveguide_simple
+  straight-loss: 1.56
+  temperature-data: 300
+design-intent:
+  mode-num: 0
+  polarization: TE
+design-params:
+  CML: SiEPICfab_Royale
+  adiabatic: true
+  bezier: 0.17
+  model: wg_strip_sio2_clad_te1310
+  offsets:
+  - 0
+  radius: 50.0
+  width: 1.1
+  widths:
+  - 1.3
+layers:
+  Waveguide: SiN_core - 10:0
+libname: SiEPICfab_Royale-Dev
+name: SiO2 Clad - Strip TE 1310nm Waveguide
+pcellname: Waveguide
+simulation-params:
+  frequency-points: 6
+  mesh-accuracy: 4
+  mesh-size: 0.005
+  modes-to-monitor: 6
+  wavelength: 1.31
+techname: SiEPICfab_Royale
+type: Strip

@@ -1,0 +1,7 @@
+# Bezier Bend
+design-params:
+  bezier-factor: 25
+  bend-radius: 5
+  waveguide-width: 0.5
+compact-model:
+  name: "bezier_bend"

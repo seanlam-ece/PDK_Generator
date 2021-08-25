@@ -1,0 +1,9 @@
+design-params:
+  duty-cycle: 0.5
+  min-gap: 0.1
+  n-periods: 300
+  perturbation-period: 0.464
+  swg-period: 0.24
+  waveguide-1-width: 0.5
+  waveguide-2-width: 0.38
+  waveguide-corrugation-width: 0.12

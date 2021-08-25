@@ -1,0 +1,8 @@
+# Waveguide Arc
+design-params:
+  radius: 10
+  width: 0.5
+  start-angle: 0
+  stop-angle: 45
+compact-model:
+  name: "wg_arc"

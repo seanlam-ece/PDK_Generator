@@ -1,0 +1,13 @@
+# Contra_DC_SWG
+design-params:
+  n-periods: 300
+  grating-period: 0.24
+  min-gap: 0.15
+  waveguide-1-corrugation: 0.03
+  waveguide-2-corrugation: 0.04
+  waveguide-1-width: 0.45
+  waveguide-2-width: 0.55
+  duty-cycle: 0.5 #(0 to 1)
+  gaussian-index: 2.7
+compact-model:
+  name: "cdc_swg"

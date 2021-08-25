@@ -1,0 +1,111 @@
+import math
+from SiEPIC.utils import get_technology, get_technology_by_name
+
+# Import KLayout Python API methods:
+# Box, Point, Polygon, Text, Trans, LayerInfo, etc
+import pya
+from pya import *
+import {function_techname}_pcells_mature
+import {function_techname}_pcells_dev
+
+class {function_techname}_Dev(Library):
+    def __init__(self):
+        tech_name = "{orig_techname}"
+        self.description = ""
+        library = "{dev_lib_name}"
+        
+        
+        print("Initializing '%s' Library." % library + self.description)
+        
+        # Import all the GDS files from the tech folder "gds"
+        import os, fnmatch
+        dir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../gds/dev")
+        search_str = '*' + '.gds'
+        for root, dirnames, filenames in os.walk(dir_path, followlinks=True):
+            for filename in fnmatch.filter([f.lower() for f in filenames], search_str):
+                file1=os.path.join(root, filename)
+                print(" - reading %s" % file1 )
+                self.layout().read(file1)
+        
+        # Import all the OAS files from the tech folder "oas"
+        dir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../oas/dev")
+        search_str = '*' + '.oas'
+        for root, dirnames, filenames in os.walk(dir_path, followlinks=True):
+            for filename in fnmatch.filter([f.lower() for f in filenames], search_str):
+                file1=os.path.join(root, filename)
+                print(" - reading %s" % file1 )
+                self.layout().read(file1)
+        
+        # Create the PCell declarations
+        for attr, value in {function_techname}_pcells_dev.__dict__.items():
+            try:
+                if value.__module__.split('.')[0] == '{function_techname}_pcells_dev' and attr != 'cls':
+                    self.layout().register_pcell(attr, value())
+                    print('Registered pcell: '+attr)
+            except:
+                pass
+          
+        # Register the library with the technology name
+        # If a library with that name already existed, it will be replaced then.
+        self.register(library)
+        print("Registered Library: {} - {}".format(library, self.description))
+    
+        if int(Application.instance().version().split('.')[1]) > 24:
+            # KLayout v0.25 introduced technology variable:
+            self.technology=tech_name
+    
+        self.layout().add_meta_info(LayoutMetaInfo("path",os.path.realpath(__file__)))
+        self.layout().add_meta_info(LayoutMetaInfo("technology",tech_name))
+
+
+class {function_techname}_Mature(Library):
+    def __init__(self):
+        tech_name = "{orig_techname}"
+        self.description = "Mature"
+        library = "{mature_lib_name}"
+        
+        print("Initializing '%s' Library." % library + self.description)
+        
+        # Import all the GDS files from the tech folder "gds"
+        import os, fnmatch
+        dir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../gds/mature")
+        search_str = '*' + '.gds'
+        for root, dirnames, filenames in os.walk(dir_path, followlinks=True):
+            for filename in fnmatch.filter([f.lower() for f in filenames], search_str):
+                file1=os.path.join(root, filename)
+                print(" - reading %s" % file1 )
+                self.layout().read(file1)
+        
+        # Import all the OAS files from the tech folder "oas"
+        dir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../oas/mature")
+        search_str = '*' + '.oas'
+        for root, dirnames, filenames in os.walk(dir_path, followlinks=True):
+            for filename in fnmatch.filter([f.lower() for f in filenames], search_str):
+                file1=os.path.join(root, filename)
+                print(" - reading %s" % file1 )
+                self.layout().read(file1)
+        
+        # Create the PCell declarations
+        for attr, value in {function_techname}_pcells_mature.__dict__.items():
+            try:
+                if value.__module__.split('.')[0] == '{function_techname}_pcells_mature' and attr != 'cls':
+                    self.layout().register_pcell(attr, value())
+                    print('Registered pcell: '+attr)
+            except:
+                pass
+          
+        # Register the library with the technology name
+        # If a library with that name already existed, it will be replaced then.
+        self.register(library)
+        print("Registered Library: {} - {}".format(library, self.description))
+    
+        if int(Application.instance().version().split('.')[1]) > 24:
+            # KLayout v0.25 introduced technology variable:
+            self.technology=tech_name
+    
+        
+        self.layout().add_meta_info(LayoutMetaInfo("path",os.path.realpath(__file__)))
+        self.layout().add_meta_info(LayoutMetaInfo("technology",tech_name))
+        
+{function_techname}_Mature()
+{function_techname}_Dev()

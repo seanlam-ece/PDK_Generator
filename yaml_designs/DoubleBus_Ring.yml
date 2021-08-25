@@ -1,0 +1,8 @@
+# Double Bus Ring
+design-params:
+  radius: 10.0
+  width: 0.5
+  gap: 0.2
+  text-polygon: 1 # Draw text polygon label? 0/1
+compact-model:
+  name: "ring_double_bus"

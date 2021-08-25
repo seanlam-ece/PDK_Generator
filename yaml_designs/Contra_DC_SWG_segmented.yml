@@ -1,0 +1,12 @@
+# Contra_DC_SWG_segmented
+design-params:
+  n-periods: 300
+  swg-period: 0.24
+  perturbation-period: 0.464
+  min-gap: 0.1
+  waveguide-corrugation-width: 0.12
+  waveguide-1-width: 0.5
+  waveguide-2-width: 0.38
+  duty-cycle: 0.5 #(0 to 1)
+compact-model:
+  name: "contra_dc_swg_segmented"

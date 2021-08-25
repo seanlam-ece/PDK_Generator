@@ -1,0 +1,7 @@
+process: 'SiEPICfab-Royale-Process'
+components-in-process:
+  SiEPICfab_Royale-Dev:
+    - 'Waveguide'
+components-to-compile:
+  SiEPICfab_Royale-Dev:
+    - 'Waveguide'

@@ -1,0 +1,9 @@
+# DC Half Ring Straight
+design-params:
+  radius: 10 # microns
+  waveguide-width: 0.5 # microns
+  gap: 0.2 # microns
+  coupler-length: 0.0 # microns
+  orthogonal-id: 1 # TE=1, TM=2
+compact-model:
+  name: "dc_halfring_straight"
